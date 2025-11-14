@@ -1,6 +1,265 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+:root {
+  --primary-color: #01b0d3;
+  --body-font: Inter;
+} 
+
+/******* Hero Section ***************************************/
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 95%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.siteName a{
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+}
+
+.myAccount a{
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Nav bar */
+
+nav{
+  background-color: black;
+  padding: 0 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0;
+}
+ 
+nav a {
+  display: block;
+  padding: 1rem 0.7rem;
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.hero-text ul {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.hero-text h2 {
+  margin: 0;
+  color: var(--primary-color)
+}
+
+.hero-text li {
+  color: var(--primary-color)
+}
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: black;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #0073cc;
+}
+
+/* Welcome Title */
+.welcome-title {
+  text-align: center;
+  padding: 1.5rem 1rem 0;
+}
+
+/* Bottom Section */
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+/* Upgrades */
+.upgrades h3, .reviews h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.upgrades-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.upgrade {
+  text-align: center;
+  border-radius: 8px;
+}
+
+.upgrade div{
+  background-color: var(--primary-color);
+  border: 1px solid black;
+}
+
+.upgrade img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  padding: 0.5rem;
+}
+.upgrade a {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+
+/* Reviews */
+.reviews ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.reviews li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/*************************************** Responsive Layout ******************************/
+@media (min-width: 768px) {
+
+  body {
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(45deg, #000 25%, #fff 25%);
+    background-size: 100px 100px;
+    background-position: 0 0, 0 0, -50px -50px, 50px 50px;
+  }
+
+  #wrapper {
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1vw;
+  width: 75vw;
+  max-width: 1200px;
+  }
+
+  .siteName a{
+    font-size: 2rem;
+  }
+
+  nav ul {
+  justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text {
+    top: 10%;
+    left: 8%;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .upgrades {
+    order: 1;
+  }
+  
+  .reviews {
+    order: 2;
+  }
+
+  .reviews li{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .upgrades-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
